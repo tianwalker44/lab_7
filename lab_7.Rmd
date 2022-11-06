@@ -1,11 +1,34 @@
 ---
 title: "lab_7"
-author: "Tian Walker"
+author: "Tian Walker, Dominik Grätz, Amber Somarriba, Brittany Spinner, Racheel Miller-Moudgil"
 date: "2022-11-03"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(rio)
+library(here)
+library(tidyverse)
+```
+
+# commit 4
+```{r}
+star <- import(here("data", "star.csv"))
+star$frl <- factor(star$frl)
+
+
+ggplot(star, aes(x = totexp, y = tmathss)) +
+  geom_point(color = "grey") + 
+  geom_smooth(aes(color = frl), method = "lm")+
+  labs(title = "Relation between teacher experience and math scores",
+         subtitle = "Separate regression lines displayed by freereduces price lunch status",
+         x = "Teacher Experience (years)",
+         y = "Total Math Scale Score", 
+       color = "Lunch status")+
+  scale_color_discrete(breaks = c("yes", "no"), labels = c("yes" = "Free/Reduced Price Meals", "no" = "Paid Meals"))+
+  #scale_color_discrete(breaks = c("yes", "no"))+
+  theme_minimal() +
+  theme(legend.position = "bottom")
 ```
 
