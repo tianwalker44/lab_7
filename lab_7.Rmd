@@ -30,5 +30,7 @@ ggplot(star, aes(x = totexp, y = tmathss)) +
   #scale_color_discrete(breaks = c("yes", "no"))+
   theme_minimal() +
   theme(legend.position = "bottom")
+
+#dominiks version
 ```
 
