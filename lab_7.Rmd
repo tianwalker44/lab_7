@@ -1,6 +1,6 @@
 ---
 title: "lab_7"
-author: "Tian Walker, Dominik Grätz, Amber Somarriba, Brittany Spinner, Racheel Miller-Moudgil"
+author: "Tian Walker, Dominik Grätz, Amber Somarriba, Brittany Spinner, Rachel Miller-Moudgil"
 date: "2022-11-03"
 output: html_document
 ---
