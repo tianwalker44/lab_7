@@ -2,6 +2,7 @@
 title: "lab_7"
 author: "Tian Walker, Dominik Grätz, Amber Somarriba, Brittany Spinner, Rachel Miller-Moudgil"
 date: "2022-11-03"
+<<<<<<< Updated upstream
 output: pdf_document
 ---
 
@@ -36,5 +37,17 @@ ggplot(star, aes(x = totexp, y = tmathss)) +
 
 #dominiks version
 #test
+=======
+output: html_document
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+>>>>>>> Stashed changes
 ```
 
+\newpage
+#References 
