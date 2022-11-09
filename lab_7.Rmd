@@ -1,13 +1,55 @@
 ---
 title: "lab_7"
-author: "Tian Walker"
+author: "Tian Walker, Dominik Grätz, Amber Somarriba, Brittany Spinner, Rachel Miller-Moudgil"
 date: "2022-11-03"
+<<<<<<< Updated upstream
+output: pdf_document
+---
+
+# commit 1 (code)
+```{r Commit 1 setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.height=8, fig.width=6.5)
+library(rio)
+library(here)
+library(tidyverse)
+
+star <- import(here("data", "star.csv"))
+
+```
+
+# commit 4
+```{r Commit 4}
+star$frl <- factor(star$frl)
+
+
+ggplot(star, aes(x = totexp, y = tmathss)) +
+  geom_point(color = "grey") + 
+  geom_smooth(aes(color = frl), method = "lm")+
+  labs(title = "Relation between teacher experience and math scores",
+         subtitle = "Separate regression lines displayed by freereduces price lunch status",
+         x = "Teacher Experience (years)",
+         y = "Total Math Scale Score", 
+       color = "Lunch status")+
+  scale_color_discrete(breaks = c("yes", "no"), labels = c("yes" = "Free/Reduced Price Meals", "no" = "Paid Meals"))+
+  #scale_color_discrete(breaks = c("yes", "no"))+
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+#dominiks version
+#test
+=======
 output: html_document
+bibliography: references.bib
 ---
 ########## Test ############
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+>>>>>>> Stashed changes
 ```
 
+\newpage
+#References 
 
