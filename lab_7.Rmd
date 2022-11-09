@@ -2,11 +2,12 @@
 title: "lab_7"
 author: "Tian Walker, Dominik Grätz, Amber Somarriba, Brittany Spinner, Rachel Miller-Moudgil"
 date: "2022-11-03"
-<<<<<<< Updated upstream
 output: pdf_document
+bibliography: [references.bib]
 ---
 
 # commit 1 (code)
+
 ```{r Commit 1 setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.height=8, fig.width=6.5)
 library(rio)
@@ -16,6 +17,22 @@ library(tidyverse)
 star <- import(here("data", "star.csv"))
 
 ```
+
+# commit 3
+```{r Commit 3}
+
+#head(star)
+
+star1 <- star %>% 
+  group_by(sex, frl) %>% 
+  summarize(math_mean = mean(tmathss),
+math_sd = sd(tmathss),
+rdg_mean = mean(treadss),
+rdg_sd = sd(treadss)) 
+
+knitr::kable(star1, booktabs = TRUE)
+```
+
 
 # commit 4
 ```{r Commit 4}
@@ -37,18 +54,8 @@ ggplot(star, aes(x = totexp, y = tmathss)) +
 
 #dominiks version
 #test
-=======
-output: html_document
-bibliography: references.bib
----
-########## Test ############
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
-library(knitr)
->>>>>>> Stashed changes
 ```
+
 
 \newpage
 #References 
